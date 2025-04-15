@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "inflearn--transcript--extract",
+  "version": "1.0",
+  "description": "더블클릭한 스크립트 셀의 부모를 기준으로 스크롤하며 데이터를 수집합니다.",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon48.png"
+  }
+}
